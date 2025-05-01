@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mrtusharkopnar</title>
+  <link rel="stylesheet" href="projects.css" />
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: #eee;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    .container {
+      max-width: 1300px;
+      width: 100%;
+      text-align: center;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      animation: fadeDown 1s ease-out;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 20px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      color: #ffcc70;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.2);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #dddddd;
+      text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.2);
+    }
+
+    /* Gallery Styles */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Default to 3 items per row */
+      gap: 20px;
+      padding: 20px 0;
+      justify-items: center;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 1024px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Two items per row on medium screens */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: 1fr; /* One item per row on smaller screens */
+      }
+    }
+
+    .gallery-item {
+      width: 100%;
+      height: auto;  /* Automatically adjusts the height based on content */
+      max-width: 450px; /* Control the width */
+      margin: 0 auto;   /* Center the item */
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      background: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;  /* Ensure images maintain their aspect ratio */
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-item .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Modal Styles */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 4px solid white;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Wedding Invitation Designs</h1>
+      <p>Explore the elegant and creative wedding invitation designs I have created.</p>
+    </header>
+
+    <section class="gallery">
+      <div class="gallery-item">
+        <img src="images/04 copy.jpg" alt="Wedding Invitation 1" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/copy-1.jpg" alt="Wedding Invitation 2" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/Dhamane.jpg" alt="Wedding Invitation 3" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/ENGAGEMENT  DESIGEN.jpg" alt="Wedding Invitation 4" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/handore final copy.jpg" alt="Wedding Invitation 5" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/khilari  3.jpg" alt="Wedding Invitation 6" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/khilari 2.jpg" alt="Wedding Invitation 7" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/Londhe 01.jpg" alt="Wedding Invitation 8" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/02 copy.jpg" alt="Wedding Invitation 9" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/03 copy.jpg" alt="Wedding Invitation 10" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/06 copy.jpg" alt="Wedding Invitation 11" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/08.jpg" alt="Wedding Invitation 12" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/khedkar 01.jpg" alt="Wedding Invitation 13" />
+      </div>
+    </section>
+  </div>
+
+  <div class="modal">
+    <img src="" alt="Modal Image" />
+  </div>
+
+  <script>
+    const modal = document.querySelector('.modal');
+    const modalImg = modal.querySelector('img');
+
+    // Close modal on click
+    modal.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    // Attach click listener to each image
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        modalImg.src = img.src;
+        modal.style.display = 'flex';
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>mrtusharkopnar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    /* Background Video Container */
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: black; /* Prevent white gaps */
+      z-index: -1;
+    }
+
+    .video-container video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    /* On mobile, show full video (no crop) */
+    @media (max-width: 768px) {
+      .video-container video {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    /* Header/Navbar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background: transparent;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      width: 120px;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      transition: color 0.3s, background-color 0.3s;
+      background: transparent;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: 1px solid transparent;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #2ecc71;
+      background-color: rgba(0, 0, 0, 0.6);
+      border: 1px solid #2ecc71;
+    }
+
+    /* Social Icons */
+    .socials {
+      position: fixed;
+      bottom: 20px;
+      left: 1%;
+      display: flex;
+      gap: 20px;
+      z-index: 1001;
+    }
+
+    .socials a {
+      font-size: 22px;
+      color: white;
+      transition: transform 0.3s;
+    }
+
+    .socials a:hover {
+      transform: scale(1.2);
+    }
+
+    .socials a .fa-instagram { color: #e4405f; }
+    .socials a .fa-whatsapp { color: #25D366; }
+    .socials a .fa-telegram { color: #0088cc; }
+    .socials a .fa-envelope { color: #d14836; }
+
+    /* Responsive Navbar & Socials */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+      }
+
+      .logo img {
+        width: 100px;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .socials {
+        flex-direction: row;
+        gap: 15px;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Background Video -->
+  <div class="video-container">
+    <video autoplay muted loop playsinline>
+      <source src="images/InShot_bg.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Header/Navbar -->
+  <header>
+    <div class="logo">
+      <img src="images/TK.png" alt="Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="images/ResumeBro.pdf" target="_blank" download>Download CV</a></li>
+        <li><a href="certificates.html">My Certificates</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Social Links -->
+  <div class="socials">
+    <a href="https://www.instagram.com/mrtusharkopnar?igsh=MWZ5MW00eXd6dHI4bw==" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://t.ly/5-1x9" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://t.me/mr_tusharkopnar" target="_blank"><i class="fab fa-telegram"></i></a>
+    <a href="mailto:youremail@example.com" target="_blank"><i class="fas fa-envelope"></i></a>
+  </div>
+
+  <script>
+    console.log("Portfolio page loaded");
+  </script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Photography and Videography Services by mrtusharkopnar - Photoshoots, Reels, Weddings, and more.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+    <title>mrtusharkopnar - Services</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        .theme-text {
+            color: #474af0;
+        }
+
+        .card-img-top {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .card {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            transition: 0.5s;
+            background-color: black;
+            border: 1px solid #474af0;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .card:hover {
+            color: white;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            left: -100%;
+            top: 0;
+            background: #474af0;
+            width: 100%;
+            height: 100%;
+            transition: 0.5s;
+            z-index: -1;
+        }
+
+        .card:hover::before {
+            left: 0%;
+        }
+
+        .container-fluid {
+            background-position: center;
+            background-size: cover;
+        }
+
+        hr {
+            border-top: 2px solid #474af0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container-fluid">
+        <h1 class="text-center mt-5 display-3 fw-bold">Our <span class="theme-text">Services</span></h1>
+        <hr class="mx-auto mb-5 w-25">
+        <div class="row mb-5">
+
+            <!-- Service Card Template -->
+            <!-- Copy this block to add more services -->
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <div class="card shadow">
+                    <img src="images/photoshoot2.jpg" alt="Photoshoot session" class="card-img-top" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="text-center">Photoshoot</h3>
+                        <hr class="mx-auto w-75">
+                        <p>
+                            Capture timeless memories with our professional photoshoot services. Whether it's portraits, events, or creative sessions,
+                            we ensure every frame tells a story with perfect lighting, composition, and style.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <div class="card shadow">
+                    <img src="images/videoshoot2.webp" alt="Videoshoot in action" class="card-img-top" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="text-center">Videoshoot</h3>
+                        <hr class="mx-auto w-75">
+                        <p>
+                            We offer high-quality video shoots for all occasions — from personal events to professional projects.
+                            Our team focuses on storytelling, crisp visuals, and capturing authentic emotions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <div class="card shadow">
+                    <img src="images/reelshoot2.jpg" alt="Reels shoot" class="card-img-top" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="text-center">Reels shoot/edit</h3>
+                        <hr class="mx-auto w-75">
+                        <p>
+                            We specialize in creating trendy, engaging reels for Instagram, YouTube, or marketing. 
+                            Our short-form content is eye-catching and impactful.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <div class="card shadow">
+                    <img src="images/cinematic2.jpg" alt="Cinematic video shoot" class="card-img-top" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="text-center">Cinematic Video Shoot</h3>
+                        <hr class="mx-auto w-75">
+                        <p>
+                            Bring your moments to life with our cinematic video production. Using advanced techniques and creative direction,
+                            we turn your events into a movie-like experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <div class="card shadow">
+                    <img src="images/storyWriting.png" alt="Story writing service" class="card-img-top" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="text-center">Story Writing</h3>
+                        <hr class="mx-auto w-75">
+                        <p>
+                            Every great project starts with a story. We craft emotional, engaging narratives to connect with your audience deeply.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <div class="card shadow">
+                    <img src="images/graphicsDesign2.jpg" alt="Graphic design artwork" class="card-img-top" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="text-center">Graphic Design</h3>
+                        <hr class="mx-auto w-75">
+                        <p>
+                            Enhance your brand with our creative design services — from logos to promotional materials, we blend art with strategy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <div class="card shadow">
+                    <img src="images/videoEditing.jpg" alt="Video editing preview" class="card-img-top" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="text-center">Video Editing</h3>
+                        <hr class="mx-auto w-75">
+                        <p>
+                            Our editing turns raw footage into polished videos — with color grading, transitions, syncing, and effects.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <div class="card shadow">
+                    <img src="images/weddingFilms.jpg" alt="Wedding film production" class="card-img-top" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="text-center">Wedding Films</h3>
+                        <hr class="mx-auto w-75">
+                        <p>
+                            Turn your wedding into a cinematic memory. We capture romance, emotions, and joy with a storytelling touch.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <div class="card shadow">
+                    <img src="images/traditional.jpg" alt="Traditional photography" class="card-img-top" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="text-center">Traditional Photo/Video</h3>
+                        <hr class="mx-auto w-75">
+                        <p>
+                            Preserve moments with authenticity and culture. We cover events with a timeless, traditional style.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <div class="card shadow">
+                    <img src="images/candid.jpg" alt="Candid photography sample" class="card-img-top" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="text-center">Candid Photography</h3>
+                        <hr class="mx-auto w-75">
+                        <p>
+                            Real smiles, natural moments — our candid photography captures genuine emotions you’ll treasure forever.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
